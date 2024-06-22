@@ -35,7 +35,7 @@ const PieChartComponent = (props) => {
     <div className = "temp">
       <ul>
         {
-          yearsArr.map((eachYear)=>(<button onClick = {()=>{setSelectedYear(eachYear)}} type = "button">{eachYear}</button>))
+          yearsArr.map((eachYear,index)=>(<button key = {`btn_${index}`} onClick = {()=>{setSelectedYear(eachYear)}} type = "button">{eachYear}</button>))
         }
       </ul>
     </div>
