@@ -1,23 +1,44 @@
-import logo from './logo.svg';
+import PieChartComponent from './components/WholeVisualPage';
 import './App.css';
+
+
+const data = [
+  {
+      "pestle": "Social",
+      "averageRelevance": 3,
+      "averageIntensity": 9
+  },
+  {
+      "pestle": "Political",
+      "averageRelevance": 3,
+      "averageIntensity": 12
+  },
+  {
+      "pestle": "Economic",
+      "averageRelevance": 4,
+      "averageIntensity": 24.9
+  },
+  {
+      "pestle": "Technological",
+      "averageRelevance": 3.5,
+      "averageIntensity": 14
+  },
+  {
+      "pestle": "Industries",
+      "averageRelevance": 3.6,
+      "averageIntensity": 12.8
+  },
+  {
+      "pestle": "Environmental",
+      "averageRelevance": 3.2,
+      "averageIntensity": 11
+  }
+];
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <PieChartComponent data = {data}/>
     </div>
   );
 }
