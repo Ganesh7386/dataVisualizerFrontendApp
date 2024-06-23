@@ -5,7 +5,7 @@ import './index.css'
 
 const yearsArr = [2026,2024,2036,2016,2041,2017,2030,2200,2019,2040,2035,2046,2022,2027 ,2025,2021,2126,2018,2050,2055];
 
-const PieChartComponent = (props) => {
+const YearBasedFilterComp = (props) => {
   const [data1 , setData1] = useState([]);
   const [data2 , setData2] = useState([])
   const [selectedYear , setSelectedYear] = useState(2026);
@@ -39,6 +39,7 @@ const PieChartComponent = (props) => {
         }
       </ul>
     </div>
+    <div className  = "entireGraphContainer">
     <div className = "graphParent">
     <ResponsiveContainer  width = "100%" height = {300}>
       <BarChart width = "100%" height={300} data={data1} margin={{top: 5, right: 2, left: 0, bottom: 0,}}>
@@ -66,7 +67,8 @@ const PieChartComponent = (props) => {
     <p>The above data is avg of both relevance and intensity of each pestle in a selected year</p>
     </div>
     </div>
+    </div>
   );
 };
 
-export default PieChartComponent;
+export default YearBasedFilterComp;

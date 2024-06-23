@@ -1,0 +1,57 @@
+.topicWiseFilterWholePage {
+    width : 100%;
+    height : 100%;
+    display : flex;
+    flex-direction: row;
+}
+
+.graphParent {
+    width : 100%;
+}
+.btnStyling {
+    height : 50px;
+}
+
+.ulButtons {
+    list-style-type: none;
+    padding: 0px;
+}
+.buttonsContainer {
+    height : 500px;
+    overflow-y :scroll;
+}
+.graphParent {
+    width : 100%;
+}
+
+@media (min-width : 0px) and (max-width : 768px) {
+    .buttonContainer {
+        width : 100%;
+    }
+
+    .graphParent {
+        width : 100%;
+    }
+    .topicWiseFilterWholePage {
+        display : flex;
+        flex-direction: column;
+    }
+    .donutChartContainer {
+        width : 100%;
+    }
+
+}
+
+@media (min-width : 769px) {
+    .buttonContainer {
+        width : 30%;
+        height : 100%;
+    }
+    .graphParent {
+        width : 45%;
+    }
+    .topicWiseFilterWholePage {
+        display : flex;
+        flex-direction: row;
+    }
+}
