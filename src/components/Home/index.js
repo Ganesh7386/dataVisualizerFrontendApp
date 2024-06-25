@@ -1,14 +1,22 @@
-import {Link} from 'react-router-dom'
-
+import YearBasedFilterComp from '../YearWiseFilterComp';
+import TopicWiseFilterComp from '../TopicWiseFilterComp';
+import SectorFilterComp from '../SectorFilterComp';
+import RegionFilterComp from '../RegionFilterComp';
+import {Routes , Route} from 'react-router-dom'
+import NavBar from '../NavBar';
+import './index.css'
 
 const Home = ()=>(
-    <div>
-        <h1>Welcome to analyser</h1>
-        <h1>Click below links for getting analysis</h1>
-        <ul>
-            <li><Link to = "/year">Year Wise Filter</Link></li>
-            <li><Link to = "/topic">Topic wise Filter</Link></li>
-        </ul>
+    <div className = "overAllAppContainer">
+        <NavBar/>
+        <div className = "mainAllPagesStatsContainer">
+        <Routes>
+        <Route path = "/year" element = {<YearBasedFilterComp/>}  />
+        <Route path = "/topic" element = {<TopicWiseFilterComp/>}  />
+        <Route path = "/sector" element = {<SectorFilterComp/>} />
+        <Route path = "/region" element = {<RegionFilterComp/>} />
+        </Routes>
+        </div>
     </div>
 )
 

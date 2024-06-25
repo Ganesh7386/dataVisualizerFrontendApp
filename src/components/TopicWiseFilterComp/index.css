@@ -1,8 +1,6 @@
 .topicWiseFilterWholePage {
     width : 100%;
-    height : 100%;
-    display : flex;
-    flex-direction: row;
+    height : 10000px;
 }
 
 .graphParent {
@@ -24,6 +22,7 @@
     width : 100%;
 }
 
+
 @media (min-width : 0px) and (max-width : 768px) {
     .buttonContainer {
         width : 100%;
@@ -39,19 +38,43 @@
     .donutChartContainer {
         width : 100%;
     }
+    .allChartsstyling {
+        width : 100%;
+    }
+    .allStatsCont {
+        display: flex;
+        flex-direction: column;
+        width : 100%;
+    }
 
 }
 
-@media (min-width : 769px) {
+@media(min-width : 769px) and (max-width : 1167px) {
+    .topicWiseFilterWholePage {
+        display : flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width : 1168px) {
     .buttonContainer {
         width : 30%;
         height : 100%;
     }
     .graphParent {
-        width : 45%;
+        width : 100%;
     }
     .topicWiseFilterWholePage {
-        display : flex;
-        flex-direction: row;
+        width : 100%;
     }
+    
+    .allChartsstyling {
+        width : 45%;
+    }
+    .allStatsCont {
+        display: flex;
+        flex-direction: row;
+        width : 100%;
+    }
+
 }

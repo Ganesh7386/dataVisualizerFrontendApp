@@ -41,19 +41,17 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div>
     <BrowserRouter>
-    <div className = "sideBar">
+    {/* <div className = "sideBar">
     <ul>
       <li><Link className = "linksStyling" to = "/year">Years</Link></li>
       <li><Link className = "linksStyling" to = "/topic">Topic</Link></li>
     </ul>
-    </div>
-    <div className = "mainContentContainer">
-    <Routes>
-    <Route path = "/year" element = {<YearBasedFilterComp/>}  />
-    <Route path = "/topic" element = {<TopicWiseFilterComp/>}  />
-    </Routes>
+    </div> */}
+    {/* <div className = "mainContentContainer"> */}
+    <div>
+    <Home/>
     </div>
     </BrowserRouter>
     </div>

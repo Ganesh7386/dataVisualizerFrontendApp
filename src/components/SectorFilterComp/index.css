@@ -1,0 +1,32 @@
+.sectorRelatedPageContainer {
+    background-color: white;
+    width : 100%;
+}
+.wholePage{
+    width : 100%;
+}
+
+.lineChartContainer {
+    width : 48%;
+}
+
+@media(min-width : 0px) and (max-width : 768px) {
+    .lineChartContainer {
+        width : 100%;
+    }
+    .sectorRelatedPageContainer {
+        display : flex;
+        flex-direction: column;
+    }
+}
+
+@media(min-width : 769px)  {
+    .lineChartContainer {
+        width : 47%;
+    }
+    .sectorRelatedPageContainer {
+        display : flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}

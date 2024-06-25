@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import PopupFilterComp from '../popupFilterComp';
 import {useState} from 'react';
 import './index.css'
 
@@ -13,7 +14,7 @@ const YearBasedFilterComp = (props) => {
   useEffect(()=> {
     console.log("use effect called");
     const makeCall = async ()=> {
-      const url = `https://coffsblackbackend.vercel.app/pestle-vs-avgrelevance-in-given-end-year/${selectedYear}`;
+      const url = `http://localhost:5001/pestle-vs-avgrelevance-in-given-end-year/${selectedYear}`;
     const gotPromise = await fetch(url);
     const jsonData = await gotPromise.json();
     const actualData = jsonData.data;
@@ -29,16 +30,22 @@ const YearBasedFilterComp = (props) => {
     
   } , [selectedYear])
 
+  const handleSettingFilter = (selectedFilterOption)=> {
+    setSelectedYear(selectedFilterOption);
+  }
+
 
   return (
     <div className = "graphContainer">
-    <div className = "temp">
+    <PopupFilterComp filterOptionsList = {yearsArr} handleFilterOptions = {handleSettingFilter} sentSelectedOption = {selectedYear}  />
+    <div className = "InnerContainer">
+    {/* <div className = "temp">
       <ul>
         {
           yearsArr.map((eachYear,index)=>(<button key = {`btn_${index}`} onClick = {()=>{setSelectedYear(eachYear)}} type = "button">{eachYear}</button>))
         }
       </ul>
-    </div>
+    </div> */}
     <div className  = "entireGraphContainer">
     <div className = "graphParent">
     <ResponsiveContainer  width = "100%" height = {300}>
@@ -57,14 +64,15 @@ const YearBasedFilterComp = (props) => {
     <ResponsiveContainer  width = "100%" height = {300}>
       <BarChart width = "100%" height={300} data={data2} margin={{top: 5, right: 2, left: 0, bottom: 0,}}>
       <CartesianGrid strokeDasharray="3 3" />
-      <XAxis dataKey="sector" />
-      <YAxis />
-      <Tooltip />
-      <Bar dataKey="averageRelevance" fill="#8884d8" />
-      <Bar dataKey="averageIntensity" fill = "pink" />
+      <XAxis dataKey="sector" tick={{ fill: 'orange' }} />
+      <YAxis tick={{ fill: 'orange' }} />
+      <Tooltip cursor= {{fill : 'lightblue'}} contentStyle={{ backgroundColor: 'pink', borderColor: 'orange' }} />
+      <Bar dataKey="averageRelevance" fill="#BB86FC" />
+      <Bar dataKey="averageIntensity" fill = "#BF0000" />
       </BarChart>
     </ResponsiveContainer>
     <p>The above data is avg of both relevance and intensity of each pestle in a selected year</p>
+    </div>
     </div>
     </div>
     </div>

@@ -1,0 +1,98 @@
+.NavbarContainer {
+    height : 80px;
+    background-color: black;
+    color : white;
+    display:  flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.NavbarContainer ul {
+    display : flex;
+    flex-direction: row;
+    list-style-type: none;
+    column-gap: 5px;
+}
+
+.largeDevicesSideBar {
+    display : flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: black;
+    color : white;
+}
+
+.largeDevicesSideBar ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    list-style-type: none;
+}
+
+.largeDeviceLeftTabsBtn {
+    height : 40px;
+    width : 80%;
+    border-radius: 20px;
+    background-color: black;
+    color : white;
+    border : 3px solid lightblue;
+}
+.largeDeviceLeftTabsBtn:hover {
+    background-color: rgb(227, 222, 222);
+    color : black;
+    font-weight: bold;
+}
+
+
+.dropdownContainer {
+    height : 150px;
+    width : 100%;
+    background-color: black;
+    color : white;
+    position: fixed;
+    top : 80px;
+    z-index : 2;
+    transition: height 1s ease-in , display 0.5 ease-in;
+}
+.navBarSmallDevicesCategoryBtn {
+    height : 50px;
+    width : 70px;
+    border : 2px solid lightblue;
+    background-color: black;
+    color : white;
+    border-radius: 30px;
+}
+.navBarSmallDevicesCategoryBtn:hover {
+    background-color: rgb(227, 222, 222);
+    color : black;
+    font-weight: bold;
+}
+
+.dropping {
+    height : 150px;
+    display: block;
+}
+
+.closing {
+    height : 0px;
+    display: none;
+}
+
+@media (min-width : 0px) and (max-width : 768px) {
+    .NavbarContainer {
+        width : 100%;
+    }
+    .largeDevicesSideBar {
+        display: none;
+    }
+}
+
+@media (min-width : 769px) {
+    .NavbarContainer {
+        display: none;
+    }
+    .largeDevicesSideBar {
+        width : 15%;
+    }
+}

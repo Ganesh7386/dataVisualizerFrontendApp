@@ -1,0 +1,26 @@
+
+.mainAllPagesStatsContainer {
+    background-color : #0f172a;
+    height : 2000px;
+}
+
+
+@media (min-width : 0px) and (max-width : 768px) {
+    .overAllAppContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    .mainAllPagesStatsContainer {
+        width : 100%;
+    }
+}
+
+@media (min-width : 769px) {
+    .overAllAppContainer {
+        display: flex;
+        flex-direction: row;
+    }
+    .mainAllPagesStatsContainer {
+        width : 85%;
+    }
+}

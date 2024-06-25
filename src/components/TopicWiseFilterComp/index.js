@@ -1,5 +1,6 @@
 import {useState , useEffect} from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer , PieChart, Pie, Cell } from 'recharts';
+import PopupFilterComp from '../popupFilterComp';
 import './index.css';
 
 const topicsList = [
@@ -47,7 +48,7 @@ const TopicWiseFilterComp = ()=>{
     useEffect(()=> {
 
         const getYearWiseStatsByTopic = async ()=> {
-            const dataPromise =  await fetch(`https://coffsblackbackend.vercel.app/avgIntensity-avgRelevance-forGivenTopic/${topic}/`);
+            const dataPromise =  await fetch(`http://localhost:5001/avgIntensity-avgRelevance-forGivenTopic/${topic}/`);
             const jsonData = await dataPromise.json();
             const reqData1 = jsonData.data[0].averageByEndYear;
             setData1(reqData1);
@@ -70,17 +71,23 @@ const TopicWiseFilterComp = ()=>{
         return color;
       };
 
+    const handleFilteringOption = (filterOption)=> {
+      setTopic(filterOption);
+    }
+
     return (
         <div className = "topicWiseFilterWholePage">
-            <div className = "buttonsContainer">
+        <PopupFilterComp filterOptionsList = {topicsList} handleFilterOptions = {handleFilteringOption} sentSelectedOption = {topic}  />
+            {/* <div className = "buttonsContainer">
                 <ul className = "ulButtons">
                     {
                         topicsList.map((eachTopic , index)=>(<li key = {`eachTopic_${index}`}><button type = "button" className = "btnStyling" onClick = {()=>{setTopic(eachTopic)}} >{eachTopic}</button></li>))
                     }
                 </ul>
-            </div>
+            </div> */}
+              <div className = "allStatsCont">
             <div className = "graphParent">
-    <ResponsiveContainer className = "piechart"  width = "100%" height = {300}>
+    <ResponsiveContainer className = "allChartsstyling"  width = "100%" height = {300}>
       <BarChart width = "100%" height={300} data={data1} margin={{top: 5, right: 2, left: 0, bottom: 0,}}>
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="endYear" />
@@ -92,11 +99,11 @@ const TopicWiseFilterComp = ()=>{
     </ResponsiveContainer>
     <p>The above data is avg of both relevance and intensity of each year in a selected topic</p>
     </div>
-    <ResponsiveContainer width = "100%" height = {500}>
-    <PieChart width = {500}  height={500}>
+    <ResponsiveContainer className = "allChartsstyling" width = "100%" height = {600}>
+    <PieChart width = {500}  height={600}>
     <Pie
       data={data2}
-      cx={300}
+      cx={200}
       cy={300}
       innerRadius={100}
       outerRadius={150}
@@ -115,6 +122,7 @@ const TopicWiseFilterComp = ()=>{
     <Legend />
   </PieChart>
   </ResponsiveContainer>
+        </div>
         </div>
     )
 

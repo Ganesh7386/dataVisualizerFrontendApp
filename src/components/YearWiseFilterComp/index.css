@@ -3,7 +3,7 @@
     width : 100%;
     border : 3px solid red;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     box-sizing: border-box;
 }
 
@@ -27,6 +27,10 @@
     row-gap: 8px;
     align-items: center;
 }
+.recharts-bar-rectangle {
+    background-color: red;
+    fill: lightgreen !important;
+}
 
 @media (min-width : 0px) and (max-width : 768px) {
     .graphContainer {
@@ -43,6 +47,13 @@
     .graphParent {
         width : 100%;
     }
+    .graphContainer {
+        width : 100%;
+    }
+    .InnerContainer {
+        display : flex;
+        flex-direction: column;
+    }
 }
 
 @media (min-width : 769px) {
@@ -56,5 +67,12 @@
     }
     .graphParent {
         width : 50%;
+    }
+    .graphContainer {
+        width : 100%;
+    }
+    .InnerContainer {
+        display : flex;
+        flex-direction: row;
     }
 }
