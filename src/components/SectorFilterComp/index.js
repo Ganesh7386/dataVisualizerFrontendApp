@@ -3,7 +3,7 @@ import { ResponsiveContainer, BarChart,Bar,LineChart, Line, XAxis, YAxis, Toolti
 import PopupFilterComp from '../popupFilterComp';
 import './index.css';
 
-const listOfSectors = ['Aerospace & defence','Automotive',
+const listOfSectors = ['Aerospace & defence',
 'Construction','Energy', 'Environment',
 'Financial services',     'Food & agriculture',
 'Government',             'Healthcare',
