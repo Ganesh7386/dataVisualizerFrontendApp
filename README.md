@@ -1,17 +1,17 @@
 # Year Page Route
-- Filters can be applied using filter option in both small , medium and large devices
-- In this page , for each selected end year average relevance and average Intensity is shown for each pestle
-- Avg Relevance , Intensity is shown for each sector
+- Filters can be applied using the filter option on small, medium, and large devices.
+- On this page, for each selected end year, average relevance and average intensity are shown for each PESTLE.
+- Average relevance and intensity are shown for each sector.
 
 # Topic Page Route
-- For each end year , average relevance and Intensity is shown
-- For each Selected topic , number of times publications happened for each sector is shown
+- For each end year, average relevance and intensity are shown.
+- For each selected topic, the number of times publications occurred for each sector is shown.
 
 # Sector
-- For Each selected Sector , average Weighted likelihood in each country for selected sector
-- Average Intensity , Relevance is shown for each country for selected sector
+- For each selected sector, average weighted likelihood in each country is shown.
+- Average intensity and relevance are shown for each country for the selected sector.
 
 #Region 
-- For each selected Region , average Intensity , Relevance is shown for each topic
-- For selected Region , average Intensity , Relevance is shown for each source
-- Count of Each source is shown for selected region
+- For each selected region, average intensity and relevance are shown for each topic.
+- For the selected region, average intensity and relevance are shown for each source.
+- The count of each source is shown for the selected region.
