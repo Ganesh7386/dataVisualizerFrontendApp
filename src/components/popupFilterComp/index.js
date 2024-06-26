@@ -18,6 +18,7 @@ const PopupFilterComp = (props)=> {
         <p>{''?'' :  sentSelectedOption}</p>
         </div>
         <div className = {`popupContainer ${showPopup? 'showPopup' : 'hidePopup' } `}>
+            <button onClick = {()=>{setShowPopup(false)}} className = "closingPopupBtn">Close</button>
             <ul>
                 {
                     filterOptionsList.map((eachoption , index)=>(<li key = {`filter_${eachoption}`}><button onClick = {()=>{handleFiltering(eachoption)}} type = "button">{eachoption}</button></li>))

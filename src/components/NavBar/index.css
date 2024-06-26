@@ -55,6 +55,10 @@
     z-index : 2;
     transition: height 1s ease-in , display 0.5 ease-in;
 }
+
+.dropdownContainer ul {
+    list-style-type: none;
+}
 .navBarSmallDevicesCategoryBtn {
     height : 50px;
     width : 70px;
@@ -67,6 +71,23 @@
     background-color: rgb(227, 222, 222);
     color : black;
     font-weight: bold;
+}
+.slidingBar {
+    height : 100px;
+    width : 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: orange;
+    overflow-x: auto;
+
+}
+.slidingBar ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+.slidingBar ul li button {
+    width : 150px;
 }
 
 .dropping {
@@ -86,6 +107,9 @@
     .largeDevicesSideBar {
         display: none;
     }
+    .slidingBar {
+        display: block;
+    }
 }
 
 @media (min-width : 769px) {
@@ -94,5 +118,8 @@
     }
     .largeDevicesSideBar {
         width : 15%;
+    }
+    .slidingBar {
+        display: none;
     }
 }

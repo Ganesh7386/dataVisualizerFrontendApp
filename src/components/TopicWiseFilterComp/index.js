@@ -48,7 +48,7 @@ const TopicWiseFilterComp = ()=>{
     useEffect(()=> {
 
         const getYearWiseStatsByTopic = async ()=> {
-            const dataPromise =  await fetch(`http://localhost:5001/avgIntensity-avgRelevance-forGivenTopic/${topic}/`);
+            const dataPromise =  await fetch(`https://coffsblackbackend.vercel.app/avgIntensity-avgRelevance-forGivenTopic/${topic}/`);
             const jsonData = await dataPromise.json();
             const reqData1 = jsonData.data[0].averageByEndYear;
             setData1(reqData1);

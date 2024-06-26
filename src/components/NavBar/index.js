@@ -10,6 +10,15 @@ const NavBar = ()=> {
     <div className  = "NavbarContainer">
             <button type = "button" className = "navBarSmallDevicesCategoryBtn" onClick = {()=> {setShowOptions(!showOptions)}} >category</button>
     </div>
+    {/* <div className = "slidingBar">
+        <ul>
+        <li><button type = "button" ><Link to = "/">Home</Link></button></li>
+        <li><button type = "button" ><Link to = "/year">Year</Link></button></li>
+        <li><button type = "button" ><Link to = "/topic">Topic</Link></button></li>
+        <li><button type = "button" ><Link to = "/sector">Sector</Link></button></li>
+        <li><button type = "button" ><Link to = "/region">Region</Link></button></li>
+        </ul>
+    </div> */}
     <div className = {`dropdownContainer ${showOptions? 'dropping' : 'closing'} `}>
         <ul>
         <li><button type = "button" onClick = {()=>{setShowOptions(!showOptions)}}><Link to = "/">Home</Link></button></li>

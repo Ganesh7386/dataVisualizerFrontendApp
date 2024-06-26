@@ -97,7 +97,7 @@ const SectorFilterComp = ()=> {
     const [sector , setSector] = useState(listOfSectors[0]);
 
     const getStats = async ()=> {
-        const promiseObj = await fetch(`http://localhost:5001/avgWeightedLikelihood-in-each-country-for-given-sector/${sector}`);
+        const promiseObj = await fetch(`https://coffsblackbackend.vercel.app/avgWeightedLikelihood-in-each-country-for-given-sector/${sector}`);
         const requiredData = await promiseObj.json();
         const actualData = requiredData.data;
 

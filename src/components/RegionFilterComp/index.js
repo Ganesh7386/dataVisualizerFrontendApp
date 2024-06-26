@@ -148,28 +148,36 @@ const RegionFilterComp = ()=> {
 
 
     const getStatsForSelectedRegion = async ()=> {
-        const promiseData = await fetch(`http://localhost:5001/stats-according-to-given-region/${region}`);
-        const jsonData = await promiseData.json();
-        const actalData = jsonData.data;
+        try {
+    const promiseData = await fetch(`https://coffsblackbackend.vercel.app/stats-according-to-given-region/${region}`);
+            // console.log(promiseData);
+            const jsonData = await promiseData.json();
+            const actalData = jsonData.data;
+            console.log(actalData)
 
-        const avgIntRelevanceDataForTopic = actalData[0].avgRelevanceIntensityForEachTopicRelatedData;
-        console.log(avgIntRelevanceDataForTopic);
-        setAvgIntRelevanceForEachTopicData(avgIntRelevanceDataForTopic);
+            const avgIntRelevanceDataForTopic = actalData[0].avgRelevanceIntensityForEachTopicRelatedData;
+            console.log(avgIntRelevanceDataForTopic);
+            setAvgIntRelevanceForEachTopicData(actalData[0].avgRelevanceIntensityForEachTopicRelatedData);
+            
+            const avgIntRelevanceForEachSectorData = actalData[0].avgRelevanceIntensityForEachSectorRelatedData;
+            console.log(avgIntRelevanceForEachSectorData);
+            setAvgRelevanceIntensityForEachSectorRelatedData(actalData[0].avgRelevanceIntensityForEachSectorRelatedData);
+            
+
+            const noOfSourcesData = actalData[0].noOfSourcesRelatedData;
+            console.log(noOfSourcesData);
+            setNoOfSourcesRelatedData(actalData[0].noOfSourcesRelatedData);
+
+
+            const avgLikelihoodForEachTopicData = actalData[0].averageLikelihoodForEachTopiceRelatedData;
+            console.log(avgLikelihoodForEachTopicData);
+            setAverageLikelihoodForEachTopiceRelatedData(actalData[0].noOfSourcesRelatedData);
+
+        }
+        catch(e) {
+            console.log(e.message);
+        }
         
-        const avgIntRelevanceForEachSectorData = actalData[0].avgRelevanceIntensityForEachSectorRelatedData;
-        console.log(avgIntRelevanceForEachSectorData);
-        setAvgRelevanceIntensityForEachSectorRelatedData(avgIntRelevanceForEachSectorData);
-        
-
-        const noOfSourcesData = actalData[0].noOfSourcesRelatedData;
-        console.log(noOfSourcesData);
-        setNoOfSourcesRelatedData(noOfSourcesData);
-
-
-        const avgLikelihoodForEachTopicData = actalData[0].averageLikelihoodForEachTopiceRelatedData;
-        console.log(avgLikelihoodForEachTopicData);
-        setAverageLikelihoodForEachTopiceRelatedData(averageLikelihoodForEachTopiceRelatedData);
-
     }
 
     useEffect(()=> {
@@ -207,7 +215,7 @@ const RegionFilterComp = ()=> {
         margin={{ top: 10, right: 25, left: 25, bottom: 10 }}
       >
         {/* <CartesianGrid strokeDasharray="3 3" /> */}
-        <XAxis dataKey="topic" />
+        <XAxis dataKey="sector" />
         <YAxis />
         <Tooltip />
         <Legend />
@@ -224,7 +232,7 @@ const RegionFilterComp = ()=> {
                     <YAxis />
                     <Tooltip />
                     <Legend />
-                    <Line type="monotone" dataKey="countOfEachSource" strokeWidth={4} stroke="green" dot={{ stroke: 'blue', strokeWidth: 3, fill: 'red' }} />
+                    <Line type="monotone" dataKey="countOfEachSource" strokeWidth={4} stroke="green" dot={{ stroke: '', strokeWidth: 3, fill: 'red' }} />
                 </LineChart>
                 </ResponsiveContainer>
             </div>

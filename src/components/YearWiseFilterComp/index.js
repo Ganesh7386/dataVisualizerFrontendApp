@@ -4,7 +4,7 @@ import PopupFilterComp from '../popupFilterComp';
 import {useState} from 'react';
 import './index.css'
 
-const yearsArr = [2026,2024,2036,2016,2041,2017,2030,2200,2019,2040,2035,2046,2022,2027 ,2025,2021,2126,2018,2050,2055];
+const yearsArr = [2026,2024,2036,2016,2041,2017,2030,2019,2040,2035,2046,2022,2027 ,2025,2021,2126,2018,2050,2055];
 
 const YearBasedFilterComp = (props) => {
   const [data1 , setData1] = useState([]);
@@ -14,7 +14,7 @@ const YearBasedFilterComp = (props) => {
   useEffect(()=> {
     console.log("use effect called");
     const makeCall = async ()=> {
-      const url = `http://localhost:5001/pestle-vs-avgrelevance-in-given-end-year/${selectedYear}`;
+      const url = `https://coffsblackbackend.vercel.app/pestle-vs-avgrelevance-in-given-end-year/${selectedYear}`;
     const gotPromise = await fetch(url);
     const jsonData = await gotPromise.json();
     const actualData = jsonData.data;

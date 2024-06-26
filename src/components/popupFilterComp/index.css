@@ -11,6 +11,7 @@
     border-radius: 20px;
     padding : 10px;
     color : white;
+    box-sizing: border-box;
 }
 
 .popupContainer {
@@ -25,7 +26,9 @@
     overflow-y: scroll;
     z-index: 1;
 }
-
+.popupContainer ul {
+    list-style-type:  none;
+}
 .filterCompButton {
     height : 80%;
     width : 60px;
