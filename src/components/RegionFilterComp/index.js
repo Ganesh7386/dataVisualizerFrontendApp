@@ -18,123 +18,123 @@ const regionsList = ['Africa',
     'World',           'world'
   ]
 
-  const data1 = [
-    {
-        "topic": "administration",
-        "averageIntensity": 6,
-        "averageRelevance": 2
-    },
-    {
-        "topic": "coal",
-        "averageIntensity": 16,
-        "averageRelevance": 4
-    },
-    {
-        "topic": "consumption",
-        "averageIntensity": 6,
-        "averageRelevance": 2
-    },
-    {
-        "topic": "economic growth",
-        "averageIntensity": 6,
-        "averageRelevance": 3
-    },
-    {
-        "topic": "economy",
-        "averageIntensity": 16,
-        "averageRelevance": 4
-    },
-    {
-        "topic": "election",
-        "averageIntensity": 9,
-        "averageRelevance": 3
-    },
-    {
-        "topic": "emission",
-        "averageIntensity": 16,
-        "averageRelevance": 4
-    },
-    {
-        "topic": "energy",
-        "averageIntensity": 9.8,
-        "averageRelevance": 3.1
-    },
-    {
-        "topic": "export",
-        "averageIntensity": 22.9,
-        "averageRelevance": 3.3
-    },
-    {
-        "topic": "gas",
-        "averageIntensity": 8.5,
-        "averageRelevance": 2.8
-    },
-    {
-        "topic": "gdp",
-        "averageIntensity": 16,
-        "averageRelevance": 4
-    },
-    {
-        "topic": "greenhouse gas",
-        "averageIntensity": 12,
-        "averageRelevance": 4
-    },
-    {
-        "topic": "growth",
-        "averageIntensity": 16,
-        "averageRelevance": 3.3
-    },
-    {
-        "topic": "interest rate",
-        "averageIntensity": 5,
-        "averageRelevance": 2
-    },
-    {
-        "topic": "investment",
-        "averageIntensity": 6,
-        "averageRelevance": 2
-    },
-    {
-        "topic": "market",
-        "averageIntensity": 9,
-        "averageRelevance": 3
-    },
-    {
-        "topic": "oil",
-        "averageIntensity": 11,
-        "averageRelevance": 3.2
-    },
-    {
-        "topic": "policy",
-        "averageIntensity": 7,
-        "averageRelevance": 3
-    },
-    {
-        "topic": "production",
-        "averageIntensity": 15.5,
-        "averageRelevance": 3
-    },
-    {
-        "topic": "shortage",
-        "averageIntensity": 6,
-        "averageRelevance": 2
-    },
-    {
-        "topic": "strategy",
-        "averageIntensity": 24,
-        "averageRelevance": 6
-    },
-    {
-        "topic": "technology",
-        "averageIntensity": 6,
-        "averageRelevance": 2
-    },
-    {
-        "topic": "trade",
-        "averageIntensity": 6,
-        "averageRelevance": 2
-    }
-]
+//   const data1 = [
+//     {
+//         "topic": "administration",
+//         "averageIntensity": 6,
+//         "averageRelevance": 2
+//     },
+//     {
+//         "topic": "coal",
+//         "averageIntensity": 16,
+//         "averageRelevance": 4
+//     },
+//     {
+//         "topic": "consumption",
+//         "averageIntensity": 6,
+//         "averageRelevance": 2
+//     },
+//     {
+//         "topic": "economic growth",
+//         "averageIntensity": 6,
+//         "averageRelevance": 3
+//     },
+//     {
+//         "topic": "economy",
+//         "averageIntensity": 16,
+//         "averageRelevance": 4
+//     },
+//     {
+//         "topic": "election",
+//         "averageIntensity": 9,
+//         "averageRelevance": 3
+//     },
+//     {
+//         "topic": "emission",
+//         "averageIntensity": 16,
+//         "averageRelevance": 4
+//     },
+//     {
+//         "topic": "energy",
+//         "averageIntensity": 9.8,
+//         "averageRelevance": 3.1
+//     },
+//     {
+//         "topic": "export",
+//         "averageIntensity": 22.9,
+//         "averageRelevance": 3.3
+//     },
+//     {
+//         "topic": "gas",
+//         "averageIntensity": 8.5,
+//         "averageRelevance": 2.8
+//     },
+//     {
+//         "topic": "gdp",
+//         "averageIntensity": 16,
+//         "averageRelevance": 4
+//     },
+//     {
+//         "topic": "greenhouse gas",
+//         "averageIntensity": 12,
+//         "averageRelevance": 4
+//     },
+//     {
+//         "topic": "growth",
+//         "averageIntensity": 16,
+//         "averageRelevance": 3.3
+//     },
+//     {
+//         "topic": "interest rate",
+//         "averageIntensity": 5,
+//         "averageRelevance": 2
+//     },
+//     {
+//         "topic": "investment",
+//         "averageIntensity": 6,
+//         "averageRelevance": 2
+//     },
+//     {
+//         "topic": "market",
+//         "averageIntensity": 9,
+//         "averageRelevance": 3
+//     },
+//     {
+//         "topic": "oil",
+//         "averageIntensity": 11,
+//         "averageRelevance": 3.2
+//     },
+//     {
+//         "topic": "policy",
+//         "averageIntensity": 7,
+//         "averageRelevance": 3
+//     },
+//     {
+//         "topic": "production",
+//         "averageIntensity": 15.5,
+//         "averageRelevance": 3
+//     },
+//     {
+//         "topic": "shortage",
+//         "averageIntensity": 6,
+//         "averageRelevance": 2
+//     },
+//     {
+//         "topic": "strategy",
+//         "averageIntensity": 24,
+//         "averageRelevance": 6
+//     },
+//     {
+//         "topic": "technology",
+//         "averageIntensity": 6,
+//         "averageRelevance": 2
+//     },
+//     {
+//         "topic": "trade",
+//         "averageIntensity": 6,
+//         "averageRelevance": 2
+//     }
+// ]
 
 
 

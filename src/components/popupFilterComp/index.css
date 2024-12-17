@@ -16,15 +16,18 @@
 
 .popupContainer {
     height : 60%;
-    width : 70%;
+    width : 50%;
     position :fixed;
     left : 10%;
     top : 100px;
     bottom : 100px;
-    background-color: pink;
+    background-color: #4e6d6b;
     color : black;
     overflow-y: scroll;
+    overflow-x: hidden;
     z-index: 1;
+    padding: 10px;
+    padding-right : 15px;
 }
 .popupContainer ul {
     list-style-type:  none;
@@ -34,7 +37,43 @@
     width : 60px;
     border-radius: 30px;
 }
+.filterButtonsListContainer {
+    display : flex;
+    column-gap: 4px;
+    flex-wrap: wrap;
 
+}
+
+.eachFilteringBtnStyling {
+    height : 50px;
+    min-width : 70px;
+    border : 3px solid black;
+    background-color: aliceblue;
+    color : black;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-top : 5px;
+    transition: height 0.5s , width 0.5s  ease-in-out;
+}
+.eachFilteringBtnStyling:hover {
+    background-color: lightblue;
+    height : 55px;
+    width : calc(1.2*70);
+    border-color: red;
+}
+.closingPopupBtn {
+    height : 60px;
+    width : 80px;
+    border : 3px solid red;
+    color : black;
+    border-radius: 30px;
+    transition: width 0.5s , height 0.5s ease-in-out;
+}
+.closingPopupBtn:hover {
+    color : red;
+    height : 64;
+    width : 84px;
+}
 .hidePopup {
     display : none;
 }

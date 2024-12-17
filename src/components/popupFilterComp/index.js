@@ -19,9 +19,9 @@ const PopupFilterComp = (props)=> {
         </div>
         <div className = {`popupContainer ${showPopup? 'showPopup' : 'hidePopup' } `}>
             <button onClick = {()=>{setShowPopup(false)}} className = "closingPopupBtn">Close</button>
-            <ul>
+            <ul className = "filterButtonsListContainer">
                 {
-                    filterOptionsList.map((eachoption , index)=>(<li key = {`filter_${eachoption}`}><button onClick = {()=>{handleFiltering(eachoption)}} type = "button">{eachoption}</button></li>))
+                    filterOptionsList.map((eachoption , index)=>(<li key = {`filter_${eachoption}`}><button className = "eachFilteringBtnStyling" onClick = {()=>{handleFiltering(eachoption)}} type = "button">{eachoption}</button></li>))
                 }
             </ul>
         </div>

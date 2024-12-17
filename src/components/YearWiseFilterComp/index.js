@@ -5,6 +5,8 @@ import {useState} from 'react';
 import './index.css'
 
 const yearsArr = [2026,2024,2036,2016,2041,2017,2030,2019,2040,2035,2046,2022,2027 ,2025,2021,2126,2018,2050,2055];
+yearsArr.sort();
+console.log(yearsArr);
 
 const YearBasedFilterComp = (props) => {
   const [data1 , setData1] = useState([]);
